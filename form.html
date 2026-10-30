@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Share your Chinese tea preferences.">
+    <title>China Tea Survey</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body class="form-page">
+    <header class="site-header">
+        <nav class="navbar" aria-label="Main navigation">
+            <a class="logo" href="china-tea.html">茶 <span>CHINA</span></a>
+
+            <ul class="nav-links">
+                <li><a href="china-tea.html#home">Home</a></li>
+                <li><a href="china-tea.html#brands">Brands</a></li>
+                <li><a href="china-tea.html#drinks">Drinks</a></li>
+            </ul>
+
+            <button id="themeButton" class="theme-button" type="button">
+                ☾ Dark
+            </button>
+        </nav>
+    </header>
+
+    <main class="form-main">
+        <div class="form-intro">
+            <p class="eyebrow">LET'S TALK TEA</p>
+            <h1>Tell us your <span>tea story.</span></h1>
+            <p>
+                What do you love about Chinese tea? Share your preferences
+                and help us to collect the data.
+            </p>
+        </div>
+
+        <form id="teaSurveyForm" class="tea-form" novalidate>
+            <div class="form-field">
+                <label for="name">Your name *</label>
+                <input
+                    type="text"
+                    id="name"
+                    name="name"
+                    autocomplete="name"
+                    maxlength="80"
+                    required
+                    aria-describedby="nameError"
+                    placeholder="Enter your name">
+                <p class="field-error" id="nameError"></p>
+            </div>
+
+            <div class="form-field">
+                <label for="email">Email address *</label>
+                <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    autocomplete="email"
+                    required
+                    aria-describedby="emailError"
+                    placeholder="you@example.com">
+                <p class="field-error" id="emailError"></p>
+            </div>
+
+            <div class="form-field">
+                <label for="favoriteBrand">Favorite tea brand *</label>
+                <select id="favoriteBrand" name="favoriteBrand" required
+                        aria-describedby="brandError">
+                    <option value="">Choose a brand</option>
+                    <option value="ama">阿嬷手作 AMA</option>
+                    <option value="heytea">喜茶 HEYTEA</option>
+                    <option value="chabaidao">茶百道 CHAPANDA</option>
+                    <option value="chayan">茶颜悦色 BEAUTEA</option>
+                    <option value="chagee">霸王茶姬 CHAGEE</option>
+					<option value="mixue">蜜雪冰城 MIXUE</option>
+                    <option value="other">Other / Still exploring</option>
+                </select>
+                <p class="field-error" id="brandError"></p>
+            </div>
+
+            <fieldset class="form-fieldset">
+                <legend class="form-legend">What do you usually enjoy?</legend>
+
+                <label class="radio-option">
+                    <input type="radio" name="teaType" value="milk-tea" checked>
+                    Milk tea
+                </label>
+
+                <label class="radio-option">
+                    <input type="radio" name="teaType" value="fruit-tea">
+                    Fruit tea
+                </label>
+
+                <label class="radio-option">
+                    <input type="radio" name="teaType" value="pure-tea">
+                    Pure tea
+                </label>
+
+                <label class="radio-option">
+                    <input type="radio" name="teaType" value="all">
+                    I enjoy them all
+                </label>
+            </fieldset>
+
+            <div class="form-field">
+                <label for="comment">Your comments *</label>
+                <textarea
+                    id="comment"
+                    name="comment"
+                    maxlength="1000"
+                    required
+                    aria-describedby="commentError"
+                    placeholder="Tell us about your favorite tea, flavor, or tea shop..."></textarea>
+                <p class="field-error" id="commentError"></p>
+            </div>
+			
+			<button class="button button-primary" type="reset">
+                Reset
+            </button>
+			
+            <button class="button button-primary" type="submit">
+                Submit my answers ↗
+            </button>
+
+            <div id="formStatus" class="form-status"
+                 role="status" aria-live="polite" hidden></div>
+        </form>
+
+        <a class="text-link form-back" href="china-tea.html">
+            ← Back to Sip China
+        </a>
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-bottom">
+            <p>© 2026 茶 China · Shuyi project</p>
+            <p>Your tea story.</p>
+        </div>
+    </footer>
+</body>
+</html>

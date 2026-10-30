@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Explore China Tea, milk tea drinks, and modern tea culture.">
+    <title>China Milk Tea</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+    <header class="site-header">
+        <nav class="navbar" aria-label="Main navigation">
+            <a class="logo" href="#home">茶 CHINA</a>
+
+            <button class="menu-toggle" id="menuToggle"
+                    type="button" aria-label="Toggle navigation"
+                    aria-expanded="false">☰</button>
+
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#brands">Brands</a></li>
+                <li><a href="#drinks">Drinks</a></li>
+                <li><a href="#about">Our Story</a></li>
+                <li><a href="form.html">Tea Survey ↗</a></li>
+            </ul>
+
+            <button id="themeButton" class="theme-button" type="button">
+                ☾ Dark
+            </button>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero section-wrap" id="home">
+            <div class="hero-content">
+                <p class="eyebrow">A LITTLE CUP OF CHINA</p>
+                <h1>Discover the art<br>of <span>Chinese tea.</span></h1>
+
+                <p class="hero-description">
+                    From time-honored tea traditions to modern milk tea,
+                    discover the flavors and stories behind China's
+                    favorite tea brands.
+                </p>
+
+                <div class="hero-actions">
+                    <a class="button button-primary" href="#drinks">
+                        Explore the menu <span>↗</span>
+                    </a>
+                    <a class="text-link" href="#about">Our tea story</a>
+                </div>
+
+                <div class="hero-note">
+                    <span class="status-dot"></span>
+                    <div>
+                        <strong id="greeting">A fresh moment awaits.</strong>
+                        <p id="liveClock" aria-live="off">Checking local time…</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section-wrap brand-section" id="brands">
+            <div class="section-heading">
+                <div>
+                    <p class="eyebrow">THE NAMES BEHIND THE CUP</p>
+                    <h2>Meet the <span>tea brands.</span></h2>
+                </div>
+                <p class="heading-note">
+                    Six distinctive brands. Countless ways to enjoy tea.
+                </p>
+            </div>
+
+            <div class="brand-grid">
+                <article class="brand-card">
+                    <span class="brand-number">01</span>
+                    <h3>阿嬷手作</h3>
+                    <p>AMA Handmade</p>
+                    <span class="brand-tag">Handcrafted spirit</span>
+                </article>
+
+                <article class="brand-card">
+                    <span class="brand-number">02</span>
+                    <h3>喜茶</h3>
+                    <p>HEYTEA</p>
+                    <span class="brand-tag">Modern tea culture</span>
+                </article>
+
+                <article class="brand-card">
+                    <span class="brand-number">03</span>
+                    <h3>茶百道</h3>
+                    <p>CHAPANDA</p>
+                    <span class="brand-tag">Everyday favorites</span>
+                </article>
+
+                <article class="brand-card">
+                    <span class="brand-number">04</span>
+                    <h3>茶颜悦色</h3>
+                    <p>BEAUTEA</p>
+                    <span class="brand-tag">Chinese-inspired style</span>
+                </article>
+
+                <article class="brand-card">
+                    <span class="brand-number">05</span>
+                    <h3>霸王茶姬</h3>
+                    <p>CHAGEE</p>
+                    <span class="brand-tag">Tea-first experience</span>
+                </article>
+				
+				<article class="brand-card">
+					<span class="brand-number">06</span>
+					<h3>蜜雪冰城</h3>
+					<p>MIXUE</p>
+					<span class="brand-tag">Affordable drinks and ice cream</span>
+				</article>
+            </div>
+        </section>
+
+  
+        <section class="drinks-section" id="drinks">
+            <div class="section-wrap">
+                <div class="section-heading">
+                    <div>
+                        <p class="eyebrow">YOUR NEXT TEA MOMENT</p>
+                        <h2>A menu worth <span>exploring.</span></h2>
+                    </div>
+                    <p class="heading-note">
+                        Browse the collection and find your kind of tea.
+                    </p>
+                </div>
+
+                <div class="menu-toolbar">
+                    <div class="filter-buttons" role="group" aria-label="Filter drinks">
+                        <button class="filter-button active"
+                                type="button" data-filter="all"
+                                aria-pressed="true">All drinks</button>
+                        <button class="filter-button"
+                                type="button" data-filter="ama"
+                                aria-pressed="false">阿嬷手作</button>
+                        <button class="filter-button"
+                                type="button" data-filter="heytea"
+                                aria-pressed="false">喜茶</button>
+                        <button class="filter-button"
+                                type="button" data-filter="chabaidao"
+                                aria-pressed="false">茶百道</button>
+                        <button class="filter-button"
+                                type="button" data-filter="chayan"
+                                aria-pressed="false">茶颜悦色</button>
+                        <button class="filter-button"
+                                type="button" data-filter="chagee"
+                                aria-pressed="false">霸王茶姬</button>
+						<button class="filter-button"
+                                type="button" data-filter="mixue"
+                                aria-pressed="false">蜜雪冰城</button>
+                    </div>
+
+                    <label class="search-box">
+                        <span aria-hidden="true">⌕</span>
+                        <input id="drinkSearch" type="search"
+                               placeholder="Find a drink..."
+                               aria-label="Search drinks">
+                    </label>
+                </div>
+
+                <p id="drinkCount" class="result-count" aria-live="polite">
+                    Explore the collection
+                </p>
+
+                <div class="drink-grid" id="drinkGrid">
+                    <article class="drink-card" data-brand="ama">
+                        <div class="drink-image">
+                            <img
+                                src="https://th.bing.com/th/id/R.17da294aac8d082887f8e740a03cc9fa?rik=Rk%2bDDtzfhWnTNg&pid=ImgRaw&r=0"
+                                alt="AmA"
+								width="400" height="400"
+                            >
+							<img
+								src="https://www.ourchinastory.com/images/cover/delicious-trend/2023/01/normal/Ourchinastory-cover-amashouzuo_x4.jpg"
+								alt="AmA"
+								width="400" height="400"
+							>
+                            <span class="image-index">01</span>
+                        </div>
+                        <div class="drink-info">
+                            <p class="drink-brand">阿嬷手作 · AMA</p>
+                            <h3>Handcrafted Milk Tea</h3>
+                            <p>Traditional Chinese milk tea with handmade toppings.</p>
+                            <div class="card-actions">
+                                <button class="favorite-button" type="button"
+                                        aria-pressed="false">♡ Favorite</button>
+                                <button class="remove-button" type="button"
+                                        aria-label="Remove Handcrafted Milk Tea">×</button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="drink-card" data-brand="heytea">
+                        <div class="drink-image">
+                            <img
+                                src="https://tse2.mm.bing.net/th/id/OIP.9DRQozg14zHKrWaGyKKUmgHaE8?r=0&rs=1&pid=ImgDetMain&o=7&rm=3"
+                                alt="Xicha"
+								width="400" height="400"
+                            >
+							<img 
+								src="https://tse2.mm.bing.net/th/id/OIP.7IT3G84D2-W0A4t39mhBJAHaD7?r=0&rs=1&pid=ImgDetMain&o=7&rm=3"
+								alt="Xicha"
+								width="400" height="400"
+							>
+                            <span class="image-index">02</span>
+                        </div>
+                        <div class="drink-info">
+                            <p class="drink-brand">喜茶 · HEYTEA</p>
+                            <h3>Fresh Fruit Tea</h3>
+                            <p>Innovative cheese foam tea and fresh fruit drinks.</p>
+                            <div class="card-actions">
+                                <button class="favorite-button" type="button"
+                                        aria-pressed="false">♡ Favorite</button>
+                                <button class="remove-button" type="button"
+                                        aria-label="Remove Fresh Fruit Tea">×</button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="drink-card" data-brand="chabaidao">
+                        <div class="drink-image">
+                            <img
+                                src="https://tse2.mm.bing.net/th/id/OIP.6LRJ5U32zDmZudjg5rpaSgHaDV?r=0&rs=1&pid=ImgDetMain&o=7&rm=3"
+                                alt="Chabaidao"
+								width="400" height="400"
+                            >
+							<img
+								src="https://tse3.mm.bing.net/th/id/OIP.rPAppWfdpE288MPA6IyIigAAAA?r=0&rs=1&pid=ImgDetMain&o=7&rm=3"
+								alt="Chabaidao"
+								width="400" height="400"
+							>
+                            <span class="image-index">03</span>
+                        </div>
+                        <div class="drink-info">
+                            <p class="drink-brand">茶百道 · CHAPANDA</p>
+                            <h3>Classic Tea Moment</h3>
+                            <p>Chinese tea drinks with fresh fruit and creamy toppings.</p>
+                            <div class="card-actions">
+                                <button class="favorite-button" type="button"
+                                        aria-pressed="false">♡ Favorite</button>
+                                <button class="remove-button" type="button"
+                                        aria-label="Remove Classic Tea Moment">×</button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="drink-card" data-brand="chayan">
+                        <div class="drink-image">
+                            <img
+                                src="https://tse3.mm.bing.net/th/id/OIP.rWP9vvQWl-pqgBIJhHLXEwHaFW?r=0&rs=1&pid=ImgDetMain&o=7&rm=3"
+                                alt="Chayan"
+								width="400" height="400"
+                            >
+							<img
+								src="https://tse1.explicit.bing.net/th/id/OIP.vijAY6vXwDlYbzG52bv2VAHaE6?r=0&rs=1&pid=ImgDetMain&o=7&rm=3"
+								alt="Chayan"
+								width="400" height="400"
+							>
+								
+                            <span class="image-index">04</span>
+                        </div>
+                        <div class="drink-info">
+                            <p class="drink-brand">茶颜悦色 · BEAUTEA</p>
+                            <h3>Chinese-Inspired Tea</h3>
+                            <p>A modern tea concept with a Chinese-inspired identity.</p>
+                            <div class="card-actions">
+                                <button class="favorite-button" type="button"
+                                        aria-pressed="false">♡ Favorite</button>
+                                <button class="remove-button" type="button"
+                                        aria-label="Remove Chinese-Inspired Tea">×</button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="drink-card" data-brand="chagee">
+                        <div class="drink-image">
+                            <img
+                                src="https://mir-s3-cdn-cf.behance.net/projects/404/b93fbf230611695.Y3JvcCwxNTQ2LDEyMTAsNDc0LDA.png"
+                                alt="Chagee"
+								width="400" height="400"
+							>
+							<img
+								src="https://tse2.mm.bing.net/th/id/OIP.Yoe1xLtZzgGTX5ANkTFFMAHaE8?r=0&rs=1&pid=ImgDetMain&o=7&rm=3"
+								alt="Chagee"
+								width="400" height="400"
+							>
+                            <span class="image-index">05</span>
+                        </div>
+                        <div class="drink-info">
+                            <p class="drink-brand">霸王茶姬 · CHAGEE</p>
+                            <h3>Original Tea Latte</h3>
+                            <p>A tea-first concept for lovers of brewed tea aroma.</p>
+                            <div class="card-actions">
+                                <button class="favorite-button" type="button"
+                                        aria-pressed="false">♡ Favorite</button>
+                                <button class="remove-button" type="button"
+                                        aria-label="Remove Original Tea Latte">×</button>
+                            </div>
+                        </div>
+                    </article>
+					
+					<article class="drink-card" data-brand="mixue">
+						<div class="drink-image">
+							<img
+								src="https://starbrandsconsulting.com/wp-content/uploads/2025/03/0mixue6-1024x768.jpg"
+								alt="Mixue"
+								width="400" height="400"
+							>
+							<img
+								src="https://tse4.mm.bing.net/th/id/OIP.jYnIDCaH6ceyl3AiY3xXzwHaJQ?r=0&rs=1&pid=ImgDetMain&o=7&rm=3"
+								alt="Mixue"
+								width="400" height="400"
+							>
+							<span class="image-index">06</span>
+						</div>
+						<div class="drink-info">
+							<p class="drink-brand">蜜雪冰城 · MIXUE</p>
+							<h3>Yummy ice cream & milk tea</h3>
+							<p>I Love You, You Love Me, Mixue Ice cream and Tea.</p> 
+							<div class="card-actions">
+								<button class="favorite-button" type="button"
+										aria-pressed="false">♡ Favorite</button>
+								<button class="remove-button" type="button"
+										aria-label="Remove Yummy ice cream & milk tea">×</button>
+							</div>
+						</div>
+					</article>
+                </div>
+
+                <p id="emptyMessage" class="empty-message" hidden>
+                    No drinks found. Try another search or filter.
+                </p>
+
+                <div class="add-drink-panel">
+                    <div>
+                        <p class="eyebrow">MAKE IT YOURS</p>
+                        <h3>Add a tea to the collection.</h3>
+                        <p>Create your own drink card and remove it whenever you like.</p>
+                    </div>
+
+                    <form id="addDrinkForm" class="add-drink-form">
+                        <label for="newDrinkName">Drink name</label>
+                        <input id="newDrinkName" name="drinkName"
+                               type="text" maxlength="60"
+                               placeholder="e.g. Chagee Milk Tea" required>
+
+                        <label for="newDrinkBrand">Brand</label>
+                        <select id="newDrinkBrand" name="drinkBrand" required>
+							<option value="" disabled selected>Select a brand</option>
+                            <option value="ama">阿嬷手作 & AMA</option>
+                            <option value="heytea">喜茶 & HEYTEA</option>
+                            <option value="chabaidao">茶百道 & CHAPANDA</option>
+                            <option value="chayan">茶颜悦色 & BEAUTEA</option>
+                            <option value="chagee">霸王茶姬 & CHAGEE</option>
+							<option value="mixue">蜜雪冰城 & MIXUE</option>
+                        </select>
+
+                        <button class="button button-primary" type="submit">
+                            Add drink
+                        </button>
+                    </form>
+                    <p id="addDrinkMessage" class="form-message"
+                       aria-live="polite"></p>
+                </div>
+            </div>
+        </section>
+
+        <section class="recommend-section section-wrap">
+            <div class="recommend-copy">
+                <p class="eyebrow">LET THE TEA CHOOSE</p>
+                <h2>A little inspiration<br>for your <span>next sip.</span></h2>
+                <p>
+                    Not sure what to try? Get a random drink suggestion
+                    from our collection.
+                </p>
+                <button id="recommendButton" class="button button-primary"
+                        type="button">Surprise me ↗</button>
+                <p id="recommendationText" class="recommendation-result"
+                   aria-live="polite">Your next tea moment starts here.</p>
+            </div>
+
+            <div class="recommend-decoration" aria-hidden="true">
+                <span class="decoration-circle circle-one"></span>
+                <span class="decoration-circle circle-two"></span>
+                <span class="tea-character">茶</span>
+                <span class="decoration-caption">SLOW DOWN.<br>SIP SOMETHING GOOD.</span>
+            </div>
+        </section>
+
+        <section class="about-section section-wrap" id="about">
+            <div class="about-heading">
+                <p class="eyebrow">ROOTED IN TRADITION, MADE FOR TODAY</p>
+                <h2>More than a drink.<br><span>A cultural ritual.</span></h2>
+            </div>
+
+            <div class="about-copy">
+                <p>
+                    Tea has a long history in China. Today, contemporary tea
+                    shops bring traditional ingredients together with new
+                    flavors, creative presentations, and modern lifestyles.
+                </p>
+                <a class="text-link" href="form.html">Share your tea preferences ↗</a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-top">
+            <a class="logo footer-logo" href="#home">茶 <span>CHINA</span></a>
+            <p>A little cup of China, wherever you are.</p>
+            <a href="#home" class="back-to-top">Back to top ↑</a>
+        </div>
+
+        <div class="footer-bottom">
+            <p>© 2026 茶 China · Shuyi project</p>
+            <p>
+                Drink names and descriptions are illustrative,
+                not official brand menus.
+            </p>
+        </div>
+    </footer>
+</body>
+</html>
